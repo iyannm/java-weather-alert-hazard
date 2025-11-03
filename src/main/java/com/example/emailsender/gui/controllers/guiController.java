@@ -1,6 +1,6 @@
-package com.example.weather.gui.controllers;
+package com.example.emailsender.gui.controllers;
 
-import com.example.weather.service.emailService;
+import com.example.emailsender.service.emailService;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;

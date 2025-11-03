@@ -1,4 +1,4 @@
-package com.example.weather.service;
+package com.example.emailsender.service;
 
 import jakarta.mail.*;
 import jakarta.mail.internet.*;

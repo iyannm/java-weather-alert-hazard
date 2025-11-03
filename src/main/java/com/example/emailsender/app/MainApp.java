@@ -1,4 +1,4 @@
-package com.example.weather.app;
+package com.example.emailsender.app;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -10,7 +10,7 @@ public class MainApp extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/gui.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/contacts.fxml"));
         Parent root = loader.load();  // load FXML once
 
         Scene scene = new Scene(root, 600, 400); // use the already loaded root
