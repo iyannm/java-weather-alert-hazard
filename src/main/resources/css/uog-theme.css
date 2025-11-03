@@ -1,0 +1,64 @@
+/* ========== UNIVERSITY OF GUAM THEME (JavaFX-compatible) ========== */
+
+/* ===== GENERAL LAYOUT ===== */
+.root {
+    -fx-background-color: #FFFFFF; /* white */
+    -fx-font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
+
+/* ===== HEADER BAR ===== */
+.header {
+    -fx-background-color: #046A38; /* Triton Green */
+    -fx-padding: 10 20 10 20;
+    -fx-alignment: center-left;
+}
+
+.header-text {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-fill: white;
+}
+
+/* ===== BODY TEXT ===== */
+.title-text {
+    -fx-font-size: 20px;
+    -fx-font-weight: normal;
+    -fx-fill: #046A38;
+}
+
+/* ===== BUTTON STYLES ===== */
+.button {
+    -fx-background-radius: 10;
+    -fx-cursor: hand;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-pref-width: 150;
+    -fx-pref-height: 50;
+    -fx-border-color: transparent;
+    -fx-border-radius: 10;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.15), 5, 0, 0, 3);
+}
+
+/* Focused button outline */
+.button:focused {
+    -fx-border-color: #046A38; /* Triton Green */
+    -fx-border-width: 2;
+}
+
+/* Primary (Send Email) */
+.button-primary {
+    -fx-background-color: #FFCD00; /* Gold */
+    -fx-text-fill: #046A38;
+}
+.button-primary:hover {
+    -fx-background-color: #E6B800; /* slightly darker gold */
+}
+
+/* Secondary (Contacts) */
+.button-secondary {
+    -fx-background-color: #EFDBB2; /* Beige */
+    -fx-text-fill: #046A38;
+}
+.button-secondary:hover {
+    -fx-background-color: #E5CF9E; /* slightly darker beige */
+}

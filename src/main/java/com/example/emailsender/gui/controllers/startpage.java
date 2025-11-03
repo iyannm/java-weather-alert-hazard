@@ -36,7 +36,7 @@ public class startpage {
 
         try {
             // Load the second window if login is correct
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/gui.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/dashboard.fxml"));
             Parent root = loader.load();
 
             Stage stage = new Stage();
