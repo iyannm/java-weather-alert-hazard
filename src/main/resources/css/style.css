@@ -1,0 +1,74 @@
+/* Root Pane */
+.root-pane {
+    -fx-background-color: #2F8A52; /* Green theme */
+}
+
+/* Header Label - modern card style */
+.header-label {
+    -fx-background-color: linear-gradient(to right, #ffffff, #e0e0e0); /* subtle gradient */
+    -fx-text-fill: #2F8A52;
+    -fx-alignment: center;
+    -fx-font-size: 32px;
+    -fx-font-family: "Montserrat", "Segoe UI", sans-serif; /* modern geometric font */
+    -fx-font-weight: bold;
+    -fx-padding: 15 0 15 0;
+    -fx-background-radius: 12;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.25), 8, 0.0, 0, 4); /* subtle shadow */
+}
+
+/* Section Label */
+.section-label {
+    -fx-text-fill: white;
+    -fx-font-size: 20px;
+    -fx-font-family: "Montserrat", "Segoe UI", sans-serif;
+    -fx-font-weight: bold;
+    -fx-padding: 5 0 5 0;
+}
+
+/* Input Fields */
+.input-field {
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color: #ffffff80;
+    -fx-background-color: #ffffff20;
+    -fx-text-fill: white;
+    -fx-padding: 8 12 8 12;
+    -fx-font-size: 15px;
+    -fx-font-family: "Montserrat", "Segoe UI", sans-serif;
+    -fx-font-weight: semi-bold;
+}
+
+/* TextArea */
+.text-area {
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color: #ffffff80;
+    -fx-background-color: #ffffff20;
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-font-family: "Montserrat", "Segoe UI", sans-serif;
+    -fx-font-weight: semi-bold;
+    -fx-padding: 12;
+}
+
+/* Send Button */
+.send-button {
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+    -fx-font-family: "Montserrat", "Segoe UI", sans-serif;
+    -fx-font-weight: bold;
+    -fx-font-size: 17px;
+    -fx-background-radius: 10;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 6, 0.0, 0, 3); /* subtle shadow */
+}
+
+.send-button:hover {
+    -fx-background-color: #45a049;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 8, 0.0, 0, 4);
+}
+
+.send-button:pressed {
+    -fx-background-color: #3e8e41;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 4, 0.0, 0, 2);
+}
