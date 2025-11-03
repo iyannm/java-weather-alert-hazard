@@ -10,7 +10,7 @@ public class MainApp extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/gui.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/startpage.fxml"));
         Parent root = loader.load();  // load FXML once
 
         Scene scene = new Scene(root, 600, 400); // use the already loaded root
@@ -20,6 +20,7 @@ public class MainApp extends Application {
     }
 
     public static void main(String[] args) {
+
         launch(args);
     }
 }
