@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<VBox xmlns="http://javafx.com/javafx/20.0.1"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.emailsender.gui.controllers.SentHistoryController"
+      spacing="15"
+      styleClass="root-pane">
+
+    <!-- Padding -->
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <!-- Header -->
+    <Label text="Sent Emails History" styleClass="header-label"/>
+
+    <!-- Table -->
+    <TableView fx:id="sentTable" prefHeight="400" styleClass="table-view">
+        <columns>
+            <TableColumn fx:id="recipientColumn" text="Recipient" prefWidth="180"/>
+            <TableColumn fx:id="subjectColumn" text="Subject" prefWidth="200"/>
+            <TableColumn fx:id="bodyColumn" text="Body" prefWidth="250"/>
+            <TableColumn fx:id="dateColumn" text="Date Sent" prefWidth="150"/>
+            <TableColumn fx:id="statusColumn" text="Status" prefWidth="100"/>
+        </columns>
+    </TableView>
+
+    <!-- Buttons -->
+    <HBox spacing="15" alignment="CENTER_RIGHT">
+        <Button fx:id="btnBack" text="← Back to Dashboard"
+                onAction="#handleBackToDashboard" styleClass="back-button"/>
+        <Button text="Refresh" onAction="#refreshSentHistory" styleClass="send-button"/>
+        <Button text="Clear History" onAction="#clearSentHistory" styleClass="send-button"/>
+    </HBox>
+
+</VBox>
+

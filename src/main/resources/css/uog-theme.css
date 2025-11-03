@@ -32,8 +32,8 @@
     -fx-cursor: hand;
     -fx-font-size: 25px;
     -fx-font-weight: bold;
-    -fx-pref-width: 300;
-    -fx-pref-height: 150;
+    -fx-pref-width: 250;
+    -fx-pref-height: 110;
     -fx-border-color: transparent;
     -fx-border-radius: 10;
     -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.15), 5, 0, 0, 3);

@@ -72,7 +72,7 @@ public class guiController {
     private void loadContactsFromJson() {
         ObjectMapper mapper = new ObjectMapper();
         try {
-            contactsList = mapper.readValue(new File("contacts.json"), new TypeReference<List<Contact>>() {});
+            contactsList = mapper.readValue(new File("src/main/resources/contacts.json"), new TypeReference<List<Contact>>() {});
         } catch (IOException e) {
             e.printStackTrace();
             showAlert("Error", "Failed to load contacts: " + e.getMessage());

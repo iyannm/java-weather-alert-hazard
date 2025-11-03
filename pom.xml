@@ -56,6 +56,13 @@
             <version>2.16.1</version>
         </dependency>
 
+        <dependency>
+            <groupId>com.fasterxml.jackson.datatype</groupId>
+            <artifactId>jackson-datatype-jsr310</artifactId>
+            <version>2.16.2</version>
+        </dependency>
+
+
         <!-- Gson (for contact management file handling) -->
         <dependency>
             <groupId>com.google.code.gson</groupId>

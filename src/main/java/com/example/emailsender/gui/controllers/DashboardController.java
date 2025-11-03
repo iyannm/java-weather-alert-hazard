@@ -19,6 +19,12 @@ public class DashboardController {
     @FXML
     private Button contactsButton;
 
+    @FXML
+    private Button sentHistoryButton;
+
+    @FXML
+    private Button logoutButton;
+
     // Utility method to open a new FXML window
     private void openWindow(String fxmlPath, String title, Button sourceButton) {
         try {
@@ -60,4 +66,17 @@ public class DashboardController {
     private void handleContacts() {
         openWindow("/fxml/contacts.fxml", "WAH Email Project - Contacts", contactsButton);
     }
+
+
+
+    @FXML
+    private void handleSentHistory() {
+        openWindow("/fxml/sent_history.fxml", "WAH Email Project - Sent History", sentHistoryButton);
+    }
+
+    @FXML
+    private void handleLogout() {
+        openWindow("/fxml/startpage.fxml", "WAH Email Project - Login", logoutButton);
+    }
+
 }

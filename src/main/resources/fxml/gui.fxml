@@ -17,7 +17,7 @@
            prefHeight="40.0"
            prefWidth="120.0"
            styleClass="send-button"
-           text="Back"
+           text="← Back"
            AnchorPane.bottomAnchor="14.0"
            AnchorPane.leftAnchor="50.0" />
 
