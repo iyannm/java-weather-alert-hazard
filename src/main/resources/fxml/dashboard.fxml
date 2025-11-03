@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.emailsender.gui.controllers.DashboardController"
+            prefWidth="500" prefHeight="300"
+            stylesheets="@/css/uog-theme.css"
+            styleClass="root">
+
+    <!-- Header -->
+    <HBox prefHeight="60" AnchorPane.topAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0"
+          styleClass="header">
+        <Text text="Dashboard" styleClass="header-text" />
+    </HBox>
+
+    <!-- Body -->
+    <VBox alignment="CENTER" spacing="30" AnchorPane.topAnchor="80" AnchorPane.bottomAnchor="20"
+          AnchorPane.leftAnchor="40" AnchorPane.rightAnchor="40">
+
+        <Text text="Welcome to UOG Dashboard" styleClass="title-text" />
+
+        <HBox alignment="CENTER" spacing="40">
+            <Button fx:id="sendEmailButton"
+                    text="Send Email"
+                    styleClass="button button-primary"
+                    onAction="#handleSendEmail" />
+
+            <Button fx:id="contactsButton"
+                    text="Contacts"
+                    styleClass="button button-secondary"
+                    onAction="#handleContacts" />
+        </HBox>
+
+    </VBox>
+
+</AnchorPane>
