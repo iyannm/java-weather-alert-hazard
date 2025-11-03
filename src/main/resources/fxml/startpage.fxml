@@ -9,38 +9,33 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="295.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.emailsender.gui.controllers.startpage">
-   <children>
-      <ImageView fitHeight="338.0" fitWidth="782.0" layoutY="52.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@light green.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="410.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@light green.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="130.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@UogTransparent.png" />
-         </image>
-      </ImageView>
-      <Text fontSmoothingType="LCD" layoutX="131.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to the WAH Email Service" wrappingWidth="373.3367919921875">
-         <font>
-            <Font name="Javanese Text" size="23.0" />
-         </font>
-      </Text>
-      <TextField fx:id="txtEmail" layoutX="193.0" layoutY="123.0" prefHeight="26.0" prefWidth="210.0" promptText="Email" />
-      <TextField fx:id="txtPassword" layoutX="194.0" layoutY="169.0" prefHeight="26.0" prefWidth="210.0" promptText="Password" />
-      <Button fx:id="btnLogin" layoutX="248.0" layoutY="221.0" mnemonicParsing="false" onAction="#handleBtnPlayClick" prefHeight="26.0" prefWidth="100.0" text="Login">
-         <font>
-            <Font name="Javanese Text" size="12.0" />
-         </font></Button>
-      <Label fx:id="lblWrong" layoutX="193.0" layoutY="76.0" prefHeight="46.0" prefWidth="216.0" textFill="RED">
-         <font>
-            <Font name="Javanese Text" size="16.0" />
-         </font>
-      </Label>
-   </children>
+<AnchorPane prefHeight="600.0" prefWidth="800.0" styleClass="start-root-pane" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.emailsender.gui.controllers.startpage">
+
+   <!-- Background Images -->
+
+
+   <ImageView fitHeight="210.0" fitWidth="217.0" layoutX="289.0" layoutY="341.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="289.0" AnchorPane.topAnchor="341.0">
+      <image>
+         <Image url="@UogTransparent.png" />
+      </image>
+   </ImageView>
+
+   <!-- Title -->
+   <Text styleClass="start-title-text" text="Welcome to the WAH Email Service" wrappingWidth="463.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="187.0" AnchorPane.topAnchor="20.0">
+      <font>
+         <Font name="Montserrat" size="24.0" />
+      </font>
+   </Text>
+
+   <!-- Error Label -->
+   <Label fx:id="lblWrong" styleClass="start-error-label" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="60.0" />
+
+   <!-- Email Field -->
+   <TextField fx:id="txtEmail" prefHeight="40.0" prefWidth="487.0" promptText="Email" styleClass="start-input-field" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="163.0" AnchorPane.topAnchor="120.0" />
+
+   <!-- Password Field -->
+   <TextField fx:id="txtPassword" prefHeight="40.0" prefWidth="487.0" promptText="Password" styleClass="start-input-field" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="163.0" AnchorPane.topAnchor="170.0" />
+
+   <!-- Login Button -->
+   <Button fx:id="btnLogin" layoutX="233.0" layoutY="243.0" onAction="#handleBtnPlayClick" prefHeight="50.0" prefWidth="322.0" styleClass="start-login-button" text="Login" AnchorPane.leftAnchor="233.0" AnchorPane.rightAnchor="245.0" AnchorPane.topAnchor="243.0" />
 </AnchorPane>

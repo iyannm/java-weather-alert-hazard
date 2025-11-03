@@ -7,42 +7,26 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefWidth="800.0" prefHeight="600.0" styleClass="root-pane"
-            xmlns="http://javafx.com/javafx/23.0.1"
-            xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.example.emailsender.gui.controllers.guiController">
+<AnchorPane prefHeight="600.0" prefWidth="800.0" styleClass="root-pane" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.emailsender.gui.controllers.guiController">
 
    <!-- Header -->
-   <Label text="WAH EMAIL PROJECT" styleClass="header-label"
-          AnchorPane.topAnchor="20.0" AnchorPane.leftAnchor="50.0"
-          AnchorPane.rightAnchor="50.0" prefHeight="60.0"/>
+   <Label prefHeight="60.0" styleClass="header-label" text="WAH EMAIL PROJECT" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="20.0" />
 
    <!-- Section Title -->
-   <Label text="New Email" styleClass="section-label"
-          AnchorPane.topAnchor="100.0" AnchorPane.leftAnchor="50.0"/>
+   <Label styleClass="section-label" text="New Email" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="100.0" />
 
    <!-- Contacts ComboBox -->
-   <ComboBox fx:id="comboContacts" promptText="Select Contact" styleClass="input-field"
-             AnchorPane.topAnchor="140.0" AnchorPane.leftAnchor="50.0"
-             AnchorPane.rightAnchor="500.0"/>
+   <ComboBox fx:id="comboContacts" promptText="Select Contact" styleClass="input-field-combo" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="500.0" AnchorPane.topAnchor="140.0" />
 
    <!-- To Field -->
-   <TextField fx:id="txtTo" promptText="To:" styleClass="input-field"
-              AnchorPane.topAnchor="180.0" AnchorPane.leftAnchor="50.0"
-              AnchorPane.rightAnchor="50.0"/>
+   <TextField fx:id="txtTo" layoutX="50.0" layoutY="187.0" promptText="To:" styleClass="input-field" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="187.0" />
 
    <!-- Subject Field -->
-   <TextField fx:id="txtSubject" promptText="Subject" styleClass="input-field"
-              AnchorPane.topAnchor="220.0" AnchorPane.leftAnchor="50.0"
-              AnchorPane.rightAnchor="50.0"/>
+   <TextField fx:id="txtSubject" layoutX="50.0" layoutY="229.0" promptText="Subject" styleClass="input-field" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="229.0" />
 
    <!-- Body Field -->
-   <TextArea fx:id="txtBody" promptText="Write your email here..." styleClass="text-area"
-             AnchorPane.topAnchor="260.0" AnchorPane.leftAnchor="50.0"
-             AnchorPane.rightAnchor="50.0" AnchorPane.bottomAnchor="80.0"/>
+   <TextArea fx:id="txtBody" layoutX="50.0" layoutY="273.0" promptText="Write your email here..." styleClass="text-area" AnchorPane.bottomAnchor="67.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="273.0" />
 
    <!-- Send Button -->
-   <Button fx:id="btnSend" text="Send" styleClass="send-button"
-           AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="50.0"
-           prefWidth="120.0" prefHeight="40.0"/>
+   <Button fx:id="btnSend" layoutX="630.0" layoutY="546.0" prefHeight="40.0" prefWidth="120.0" styleClass="send-button" text="Send" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="50.0" />
 </AnchorPane>

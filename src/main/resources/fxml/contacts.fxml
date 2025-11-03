@@ -3,28 +3,36 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.geometry.Insets?>
+<?import javafx.geometry.Pos?>
 
 <VBox xmlns="http://javafx.com/javafx"
       xmlns:fx="http://javafx.com/fxml"
       fx:controller="com.example.emailsender.gui.controllers.ContactsController"
-      spacing="10">
+      spacing="15"
+      alignment="TOP_CENTER"
+      styleClass="root-pane">
 
+    <!-- Correct Padding -->
     <padding>
-        <Insets top="15" right="15" bottom="15" left="15" />
+        <Insets top="20" right="20" bottom="20" left="20"/>
     </padding>
 
-    <Label text="Contacts" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+    <!-- Header Label -->
+    <Label text="Contacts" styleClass="header-label-contact"/>
 
-    <TableView fx:id="contactsTable" prefHeight="300">
+    <!-- TableView for contacts -->
+    <TableView fx:id="contactsTable" prefHeight="400" prefWidth="760" styleClass="table-view">
         <columns>
-            <TableColumn fx:id="nameColumn" text="Name" prefWidth="150"/>
-            <TableColumn fx:id="emailColumn" text="Email" prefWidth="250"/>
+            <TableColumn fx:id="nameColumn" text="Name" prefWidth="380"/>
+            <TableColumn fx:id="emailColumn" text="Email" prefWidth="380"/>
         </columns>
     </TableView>
 
-    <HBox spacing="10">
-        <Button text="Create Contact" onAction="#onCreateContact"/>
-        <Button text="Edit Contact" onAction="#onEditContact"/>
-        <Button text="Delete Contact" onAction="#onDeleteContact"/>
+    <!-- Action buttons -->
+    <HBox spacing="15" alignment="CENTER_RIGHT">
+        <Button text="Create Contact" onAction="#onCreateContact" styleClass="send-button"/>
+        <Button text="Edit Contact" onAction="#onEditContact" styleClass="send-button"/>
+        <Button text="Delete Contact" onAction="#onDeleteContact" styleClass="send-button"/>
     </HBox>
+
 </VBox>
