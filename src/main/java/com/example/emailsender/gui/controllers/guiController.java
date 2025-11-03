@@ -4,11 +4,15 @@ import com.example.emailsender.service.emailService;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.scene.control.TextArea;
+import javafx.stage.Stage;
 
 import java.io.File;
 import java.io.IOException;
@@ -31,6 +35,9 @@ public class guiController {
 
     @FXML
     private Button btnSend;
+
+    @FXML
+    private Button btnBack;  // Back to Dashboard button
 
     private List<Contact> contactsList;
 
@@ -59,6 +66,7 @@ public class guiController {
         });
 
         btnSend.setOnAction(e -> handleSendEmail());
+        btnBack.setOnAction(e -> handleBackToDashboard()); // Handle back button
     }
 
     private void loadContactsFromJson() {
@@ -87,6 +95,32 @@ public class guiController {
         } catch (Exception ex) {
             ex.printStackTrace();
             showAlert("Error", "Failed to send email: " + ex.getMessage());
+        }
+    }
+
+    private void handleBackToDashboard() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/dashboard.fxml"));
+            Parent root = loader.load();
+
+            Stage stage = new Stage();
+            stage.setTitle("WAH Email Project - Dashboard");
+            Scene scene = new Scene(root, 800, 600);
+            String css = getClass().getResource("/css/style.css").toExternalForm();
+            scene.getStylesheets().add(css);
+
+            stage.setScene(scene);
+            stage.setMinWidth(800);
+            stage.setMinHeight(600);
+            stage.show();
+
+            // Close the current email window
+            Stage currentStage = (Stage) btnBack.getScene().getWindow();
+            currentStage.close();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+            showAlert("Error", "Failed to open Dashboard: " + e.getMessage());
         }
     }
 

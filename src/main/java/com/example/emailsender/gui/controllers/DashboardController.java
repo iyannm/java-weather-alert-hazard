@@ -5,41 +5,59 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
 import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class DashboardController {
 
-    // Runs when "Send Email" button is clicked
+    // Buttons from FXML
     @FXML
-    private void handleSendEmail() {
+    private Button sendEmailButton;
+
+    @FXML
+    private Button contactsButton;
+
+    // Utility method to open a new FXML window
+    private void openWindow(String fxmlPath, String title, Button sourceButton) {
         try {
-            // Load the email GUI page
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/gui.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlPath));
             Parent root = loader.load();
 
-            // Create a new window for the email sender
             Stage stage = new Stage();
-            stage.setTitle("Send Email");
-            stage.setScene(new Scene(root, 600, 400));
+            stage.setTitle(title);
+
+            Scene scene = new Scene(root, 800, 600); // Resolution 800x600
+            String css = getClass().getResource("/css/style.css").toExternalForm();
+            scene.getStylesheets().add(css);
+
+            stage.setScene(scene);
+            stage.setMinWidth(800);
+            stage.setMinHeight(600);
             stage.show();
 
-        } catch (Exception e) {
+            // Close the current window (dashboard)
+            Stage currentStage = (Stage) sourceButton.getScene().getWindow();
+            currentStage.close();
+
+        } catch (IOException e) {
             e.printStackTrace();
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Error");
-            alert.setHeaderText("Unable to load Email page");
+            alert.setHeaderText("Unable to open window");
             alert.setContentText(e.getMessage());
             alert.showAndWait();
         }
     }
 
-    // Runs when "Contacts" button is clicked
+    @FXML
+    private void handleSendEmail() {
+        openWindow("/fxml/gui.fxml", "WAH Email Project - Send Email", sendEmailButton);
+    }
+
     @FXML
     private void handleContacts() {
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Contacts");
-        alert.setHeaderText(null);
-        alert.setContentText("Contacts button clicked!");
-        alert.showAndWait();
+        openWindow("/fxml/contacts.fxml", "WAH Email Project - Contacts", contactsButton);
     }
 }

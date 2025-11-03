@@ -30,9 +30,11 @@
 
     <!-- Action buttons -->
     <HBox spacing="15" alignment="CENTER_RIGHT">
+        <Button fx:id="btnBack" text="Back to Dashboard" styleClass="back-button"/>
         <Button text="Create Contact" onAction="#onCreateContact" styleClass="send-button"/>
         <Button text="Edit Contact" onAction="#onEditContact" styleClass="send-button"/>
         <Button text="Delete Contact" onAction="#onDeleteContact" styleClass="send-button"/>
     </HBox>
+
 
 </VBox>

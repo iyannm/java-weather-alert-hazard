@@ -39,12 +39,12 @@ public class startpage {
 
         try {
             // Load the GUI FXML
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/gui.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/dashboard.fxml"));
             Parent root = loader.load();
 
             // Create new stage for the main GUI
             Stage stage = new Stage();
-            stage.setTitle("WAH Email Project - Email Sender");
+            stage.setTitle("WAH Email Project - Dashboard");
 
             // Attach the CSS stylesheet
             String css = getClass().getResource("/css/style.css").toExternalForm();

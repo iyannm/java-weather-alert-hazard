@@ -1,12 +1,17 @@
 package com.example.emailsender.gui.controllers;
 
-
 import com.example.emailsender.service.ContactManager;
 import com.example.emailsender.model.Contact;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 import java.util.Optional;
 
 public class ContactsController {
@@ -14,6 +19,7 @@ public class ContactsController {
     @FXML private TableView<Contact> contactsTable;
     @FXML private TableColumn<Contact, String> nameColumn;
     @FXML private TableColumn<Contact, String> emailColumn;
+    @FXML private Button btnBack; // Back to dashboard button
 
     private ObservableList<Contact> contacts;
 
@@ -24,6 +30,8 @@ public class ContactsController {
 
         nameColumn.setCellValueFactory(c -> new javafx.beans.property.SimpleStringProperty(c.getValue().getName()));
         emailColumn.setCellValueFactory(c -> new javafx.beans.property.SimpleStringProperty(c.getValue().getEmail()));
+
+        btnBack.setOnAction(e -> handleBackToDashboard());
     }
 
     @FXML
@@ -85,5 +93,32 @@ public class ContactsController {
     private void showError(String message) {
         Alert alert = new Alert(Alert.AlertType.ERROR, message, ButtonType.OK);
         alert.showAndWait();
+    }
+
+    private void handleBackToDashboard() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/dashboard.fxml"));
+            Parent root = loader.load();
+
+            Stage stage = new Stage();
+            stage.setTitle("WAH Email Project - Dashboard");
+            Scene scene = new Scene(root, 800, 600);
+            String css = getClass().getResource("/css/style.css").toExternalForm();
+            scene.getStylesheets().add(css);
+
+            stage.setScene(scene);
+            stage.setMinWidth(800);
+            stage.setMinHeight(600);
+            stage.show();
+
+            // Close the current contacts window
+            Stage currentStage = (Stage) btnBack.getScene().getWindow();
+            currentStage.close();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+            Alert alert = new Alert(Alert.AlertType.ERROR, "Failed to open Dashboard: " + e.getMessage(), ButtonType.OK);
+            alert.showAndWait();
+        }
     }
 }

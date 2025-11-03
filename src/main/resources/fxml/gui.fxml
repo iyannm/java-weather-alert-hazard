@@ -9,6 +9,18 @@
 
 <AnchorPane prefHeight="600.0" prefWidth="800.0" styleClass="root-pane" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.emailsender.gui.controllers.guiController">
 
+
+   <!-- Back Button -->
+   <Button fx:id="btnBack"
+           layoutX="50.0"
+           layoutY="546.0"
+           prefHeight="40.0"
+           prefWidth="120.0"
+           styleClass="send-button"
+           text="Back"
+           AnchorPane.bottomAnchor="14.0"
+           AnchorPane.leftAnchor="50.0" />
+
    <!-- Header -->
    <Label prefHeight="60.0" styleClass="header-label" text="WAH EMAIL PROJECT" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="20.0" />
 
