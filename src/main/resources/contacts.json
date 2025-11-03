@@ -1,1 +1,7 @@
-[{"name":"Winton","email":"wahgalindo@gmail.com"}]
+[ {
+  "name" : "Winton",
+  "email" : "wahgalindo@gmail.com"
+}, {
+  "name" : "Earl",
+  "email" : "earl@test.com"
+} ]

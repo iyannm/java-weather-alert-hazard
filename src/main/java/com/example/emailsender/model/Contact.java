@@ -4,19 +4,28 @@ public class Contact {
     private String name;
     private String email;
 
+    // Default constructor needed by Jackson
+    public Contact() {}
+
     public Contact(String name, String email) {
         this.name = name;
         this.email = email;
     }
 
-    public String getName() { return name; }
-    public void setName(String name) { this.name = name; }
+    // Getters and setters
+    public String getName() {
+        return name;
+    }
 
-    public String getEmail() { return email; }
-    public void setEmail(String email) { this.email = email; }
+    public void setName(String name) {
+        this.name = name;
+    }
 
-    @Override
-    public String toString() {
-        return name + " (" + email + ")";
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }
