@@ -1,4 +1,5 @@
-package com.example.emailsender.controller;
+package com.example.emailsender.gui.controllers;
+
 
 import com.example.emailsender.service.ContactManager;
 import com.example.emailsender.model.Contact;
