@@ -1,4 +1,4 @@
-package com.example.weather.gui.controllers;
+package com.example.emailsender.gui.controllers;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
